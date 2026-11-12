@@ -1,0 +1,212 @@
+
+/* General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f8fc;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Navigation */
+header {
+    background-color: #123c69;
+    padding: 18px 8%;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.navbar h2 {
+    color: white;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar a:hover {
+    color: #ffd166;
+}
+
+/* Homepage */
+.hero {
+    background: linear-gradient(120deg, #dcecff, #eef5ff);
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.hero h1 {
+    font-size: 42px;
+    color: #123c69;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #123c69;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 6px;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background-color: #205b91;
+}
+
+/* Sections */
+section {
+    padding: 60px 8%;
+    text-align: center;
+}
+
+section h2 {
+    color: #123c69;
+    font-size: 30px;
+    margin-bottom: 25px;
+}
+
+/* Search and Filter */
+#search,
+#category {
+    padding: 12px;
+    margin: 10px;
+    width: 250px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Internship Cards */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.card {
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+}
+
+.card h3 {
+    color: #123c69;
+    margin-bottom: 10px;
+}
+
+.card button {
+    margin-top: 15px;
+}
+
+/* Contact Form */
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+#contact-form input,
+#contact-form textarea {
+    width: 100%;
+    max-width: 450px;
+    padding: 13px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+}
+
+#contact-form textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+button {
+    background-color: #123c69;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #205b91;
+}
+
+#form-result {
+    margin-top: 15px;
+    color: #123c69;
+}
+
+/* Footer */
+footer {
+    background-color: #123c69;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .navbar ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    #search,
+    #category {
+        width: 100%;
+        max-width: 350px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
